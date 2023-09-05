@@ -3,7 +3,7 @@ Goto: https://www.katacoda.com/scenario-examples/courses/environment-usages/node
 1. snarkjs
 ```
 curl -LSfs https://raw.githubusercontent.com/github167/demo-circom2/init.sh | sh
-cd zkmm
+cd demo-circom2
 ```
 
 2. test from official js
