@@ -1,9 +1,14 @@
 Goto: https://www.katacoda.com/scenario-examples/courses/environment-usages/nodejs
 
+1. install cargo
+```
+curl --proto '=https' --tlsv1.2 https://sh.rustup.rs -sSf | sh
+```
+
 1. snarkjs
 ```
+source "$HOME/.cargo/env"
 curl -LSfs https://raw.githubusercontent.com/github167/demo-circom2/init.sh | sh
-cd demo-circom2
 ```
 
 2. test from official js
