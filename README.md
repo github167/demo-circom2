@@ -8,7 +8,7 @@ curl --proto '=https' --tlsv1.2 https://sh.rustup.rs -sSf | sh
 1. snarkjs
 ```
 source "$HOME/.cargo/env"
-curl -LSfs https://raw.githubusercontent.com/github167/demo-circom2/init.sh | sh
+curl -LSfs https://raw.githubusercontent.com/github167/demo-circom2/main/init.sh | sh
 ```
 
 2. test from official js
