@@ -19,3 +19,7 @@ cargo install --path circom
 curl -LSfs https://raw.githubusercontent.com/github167/demo-circom2/main/init.sh | sh
 
 ```
+3. ZkREPL
+```
+https://zkrepl.dev/
+```
