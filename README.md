@@ -1,24 +1,39 @@
-Goto: https://www.katacoda.com/scenario-examples/courses/environment-usages/nodejs
+# Tornado Cash but with Poseidon Hash
 
-1. install cargo and circom
-```
-curl --proto '=https' --tlsv1.2 https://sh.rustup.rs -sSf > install_cargo.sh
-chmod u+x install_cargo.sh
-./install_cargo.sh -y
-source "$HOME/.cargo/env"
-git clone https://github.com/iden3/circom.git
-cd circom
+[![Node.js CI](https://github.com/ChihChengLiang/poseidon-tornado/actions/workflows/node.js.yml/badge.svg)](https://github.com/ChihChengLiang/poseidon-tornado/actions/workflows/node.js.yml)
 
-cargo build --release
-cargo install --path circom
+WARNING: This project is unaudited, please don't use in the production.
 
-```
+We copy and modify the [Tornado Cash](https://github.com/tornadocash/tornado-core) and implement the optimization suggestions in the a Tornado [audit report](https://tornado.cash/audits/TornadoCash_cryptographic_review_ABDK.pdf).
 
-2. circom compilation and snarkjs verification
-```
-curl -LSfs https://raw.githubusercontent.com/github167/demo-circom2/main/init.sh | sh
+Specifically we
+
+- Use Poseidon Hash for tree hashing, nullifier hashing, and commitment construction
+- Use the following suggested construction to allow nullifier reuse
 
 ```
-3. ZkREPL
-https://zkrepl.dev/
+commitment = PoseidonHash(nullifier, 0)
+nullifierHash = PoseidonHash(nullifier, 1, leafIndex)
+```
 
+## Build
+
+First, you must have the Circom 2 compiler installed. See [installation
+instructions](https://docs.circom.io/getting-started/installation/) for details.
+
+The build step compiles the circuit, does untrusted setup, generates verifier contract, and compiles all the contracts. It could take a while at the setup step.
+
+```sh
+npm install
+npm run build
+```
+
+```sh
+npm run test
+```
+
+## Benchmark
+
+```sh
+npm run info
+```
