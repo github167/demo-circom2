@@ -2,17 +2,7 @@
 PHASE1=build/phase1_final.ptau
 PHASE2=build/phase2_final.ptau
 CIRCUIT_ZKEY=build/circuit_final.zkey
-/*
-# Phase 1
-if [ -f "$PHASE1" ]; then
-    echo "Phase 1 file exists, no action"
-else
-    echo "Phase 1 file does not exist, downloading ..."
-    curl -o $PHASE1 https://hermez.s3-eu-west-1.amazonaws.com/powersOfTau28_hez_final_14.ptau
-fi
-*/
-# Untrusted phase 2
-//npx snarkjs powersoftau prepare phase2 $PHASE1 $PHASE2 -v
+
 curl -o $PHASE2 https://hermez.s3-eu-west-1.amazonaws.com/powersOfTau28_hez_final_16.ptau
 npx snarkjs zkey new build/withdraw.r1cs $PHASE2 $CIRCUIT_ZKEY
 
