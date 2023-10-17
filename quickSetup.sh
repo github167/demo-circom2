@@ -12,4 +12,5 @@ npx snarkjs zkey export verificationkey $CIRCUIT_ZKEY build/verification_key.jso
 npx snarkjs zkey export solidityverifier $CIRCUIT_ZKEY build/Verifier.sol
 # Fix solidity version (and want the command to work on both linux and mac)
 cd build/ && sed 's/0\.6\.11/0\.7\.3/g' Verifier.sol > tmp.txt && mv tmp.txt Verifier.sol && cd ..
-cd contracts && ln -s ../build/Verifier.sol Verifier.sol && cd ..
+#cd contracts && ln -s ../build/Verifier.sol Verifier.sol && cd ..
+cp build/Verifier.sol contracts/Verifier.sol
