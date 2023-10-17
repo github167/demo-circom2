@@ -17,5 +17,6 @@ npm run compile
 Test
 ```
 npm run test
+#however, doesn't work in playground
 ```
 Playground: https://www.katacoda.com/scenario-examples/courses/environment-usages/nodejs
