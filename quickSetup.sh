@@ -8,7 +8,6 @@ npx snarkjs zkey new build/withdraw.r1cs $PHASE2 $CIRCUIT_ZKEY
 
 npx snarkjs zkey export verificationkey $CIRCUIT_ZKEY build/verification_key.json
 
-
 npx snarkjs zkey export solidityverifier $CIRCUIT_ZKEY build/Verifier.sol
 # Fix solidity version (and want the command to work on both linux and mac)
 cd build/ && sed 's/0\.6\.11/0\.7\.3/g' Verifier.sol > tmp.txt && mv tmp.txt Verifier.sol && cd ..
