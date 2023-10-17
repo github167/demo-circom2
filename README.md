@@ -17,6 +17,6 @@ npm run compile
 Test
 ```
 npm run test
-#however, doesn't work in playground
+# LinkError: WebAssembly.instantiate(): Import #1 module="runtime" function="printErrorMessage" error: function import requires a callable
 ```
 Playground: https://www.katacoda.com/scenario-examples/courses/environment-usages/nodejs
