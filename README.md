@@ -1,5 +1,4 @@
-https://github.com/ChihChengLiang/poseidon-tornado
-# Tornado Cash but with Poseidon Hash
+Source: https://github.com/ChihChengLiang/poseidon-tornado
 
 Install
 ```
@@ -18,4 +17,4 @@ Test
 ```
 npm run test
 ```
-Playground: 
+Playground: https://www.katacoda.com/scenario-examples/courses/environment-usages/nodejs
