@@ -9,6 +9,7 @@ cd demo-circom2
 yarn
 yarn dev
 ```
+2. launch website: http://localhost:4000
 
 Playground:
 https://www.katacoda.com/scenario-examples/courses/environment-usages/nodejs
