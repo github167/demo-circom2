@@ -1,8 +1,7 @@
 Playground:
 
-https://www.katacoda.com/scenario-examples/courses/environment-usages/nodejs
-
-https://codedamn.com/online-compiler/node#start
+- https://www.katacoda.com/scenario-examples/courses/environment-usages/nodejs
+- https://codedamn.com/online-compiler/node#start
 
 1. install cargo and circom
 ```
