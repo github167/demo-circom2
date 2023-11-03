@@ -30,6 +30,7 @@ cd build/withdraw_js
 node ./generate_witness.js withdraw.wasm input.json withdraw.wtns
 cd ..
 snarkjs groth16 prove circuit_final.zkey withdraw_js/withdraw.wtns proof.json public.json
+snarkjs groth16 verify verification_key.json public.json proof.json
 
 ```
 
