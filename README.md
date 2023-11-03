@@ -1,5 +1,12 @@
 Source: https://github.com/ChihChengLiang/poseidon-tornado
 
+Upgrade nodejs
+```
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash
+source ~/.bashrc
+nvm install node
+
+```
 Install
 ```
 git clone -b poseidon-tornado https://github.com/github167/demo-circom2
