@@ -24,6 +24,18 @@ npm run compile
 
 ```
 
+fullproof
+```
+snarkjs groth16 fullprove withdraw_js/input.json withdraw_js/withdraw.wasm circuit_final.zkey proof.json public.json
+
+#[ERROR] snarkJS: LinkError: WebAssembly.instantiate(): Import #1 module="runtime" function="printErrorMessage": function import requires a callable
+#    at Object.builder [as WitnessCalculatorBuilder] (/root/demo-circom2/node_modules/circom_runtime/build/main.cjs:100:40)
+#    at async wtnsCalculate$1 (/root/demo-circom2/node_modules/snarkjs/build/cli.cjs:5863:16)
+#    at async groth16FullProve$1 (/root/demo-circom2/node_modules/snarkjs/build/cli.cjs:5904:5)
+#    at async Object.groth16FullProve [as action] (/root/demo-circom2/node_modules/snarkjs/build/cli.cjs:8317:36)
+#    at async clProcessor (/root/demo-circom2/node_modules/snarkjs/build/cli.cjs:300:21)
+```
+
 Test
 ```
 npm run test
