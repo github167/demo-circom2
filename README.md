@@ -1,5 +1,7 @@
 Source: https://github.com/ChihChengLiang/poseidon-tornado
 
+Playground: https://www.katacoda.com/scenario-examples/courses/environment-usages/nodejs
+
 Upgrade nodejs
 ```
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash
