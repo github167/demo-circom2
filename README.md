@@ -14,6 +14,7 @@ Install
 git clone -b poseidon-tornado https://github.com/github167/demo-circom2
 cd demo-circom2
 npm install
+npm install -g snarkjs
 
 ```
 Compile
@@ -23,8 +24,16 @@ npm run setup
 npm run compile
 
 ```
+prove
+```
+cd build/withdraw_js
+node ./generate_witness.js withdraw.wasm input.json withdraw.wtns
+cd ..
+snarkjs groth16 prove circuit_final.zkey withdraw_js/withdraw.wtns proof.json public.json
 
-fullproof
+```
+
+fullprove
 ```
 snarkjs groth16 fullprove withdraw_js/input.json withdraw_js/withdraw.wasm circuit_final.zkey proof.json public.json
 
