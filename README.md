@@ -26,9 +26,8 @@ npm run compile
 ```
 prove
 ```
-cd build/withdraw_js
-node ./generate_witness.js withdraw.wasm input.json withdraw.wtns
-cd ..
+cd build
+node withdraw_js/generate_witness.js withdraw_js/withdraw.wasm input.json withdraw_js/withdraw.wtns
 snarkjs groth16 prove circuit_final.zkey withdraw_js/withdraw.wtns proof.json public.json
 snarkjs groth16 verify verification_key.json public.json proof.json
 
