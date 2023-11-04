@@ -31,7 +31,7 @@ node withdraw_js/generate_witness.js withdraw_js/withdraw.wasm input.json withdr
 snarkjs groth16 prove circuit_final.zkey withdraw_js/withdraw.wtns proof.json public.json
 snarkjs groth16 verify verification_key.json public.json proof.json
 
-snarkjs groth16 fullprove withdraw_js/input.json withdraw_js/withdraw.wasm circuit_final.zkey proof.json public.json
+snarkjs groth16 fullprove input.json withdraw_js/withdraw.wasm circuit_final.zkey proof.json public.json
 snarkjs groth16 verify verification_key.json public.json proof.json
 
 ```
