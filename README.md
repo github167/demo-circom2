@@ -14,7 +14,7 @@ Install
 git clone -b poseidon-tornado https://github.com/github167/demo-circom2
 cd demo-circom2
 npm install
-npm install -g snarkjs
+npm install snarkjs@0.5.0
 
 ```
 Compile
