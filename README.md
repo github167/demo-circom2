@@ -40,14 +40,7 @@ Test
 ```
 npm install snarkjs@0.4.26
 npm run test
-# LinkError: WebAssembly.instantiate(): Import #1 module="runtime" function="printErrorMessage" error: function import requires a callable
 
-# LinkError: WebAssembly.instantiate(): Import #1 module="runtime" function="printErrorMessage" error: function import requires a callable
-# at Object.builder [as WitnessCalculatorBuilder] (node_modules/circom_runtime/build/main.cjs:100:40)
-# at async wtnsCalculate (node_modules/snarkjs/build/main.cjs:1130:16)
-# at async Object.groth16FullProve [as fullProve] (node_modules/snarkjs/build/main.cjs:1171:5)
-# at async prove (tests/ETHTornado.test.ts:80:23)
-# at async Context.<anonymous> (tests/ETHTornado.test.ts:169:26)
 ```
 Playground:
 https://www.katacoda.com/scenario-examples/courses/environment-usages/nodejs
