@@ -2,8 +2,13 @@
 PHASE1=build/phase1_final.ptau
 PHASE2=build/phase2_final.ptau
 CIRCUIT_ZKEY=build/circuit_final.zkey
+if [ -f "$PHASE2" ]; then
+    echo "Phase 2 file exists, no action"
+else
+    echo "Phase 1 file does not exist, downloading ..."
+    curl -o $PHASE2 https://hermez.s3-eu-west-1.amazonaws.com/powersOfTau28_hez_final_14.ptau
+fi
 
-curl -o $PHASE2 https://hermez.s3-eu-west-1.amazonaws.com/powersOfTau28_hez_final_16.ptau
 npx snarkjs zkey new build/withdraw.r1cs $PHASE2 $CIRCUIT_ZKEY
 
 npx snarkjs zkey export verificationkey $CIRCUIT_ZKEY build/verification_key.json
