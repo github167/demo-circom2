@@ -14,7 +14,7 @@ Install
 git clone -b poseidon-tornado https://github.com/github167/demo-circom2
 cd demo-circom2
 npm install
-npm install snarkjs@0.5.0
+
 
 ```
 Compile
@@ -38,6 +38,7 @@ snarkjs groth16 verify verification_key.json public.json proof.json
 
 Test
 ```
+npm install snarkjs@0.4.26
 npm run test
 # LinkError: WebAssembly.instantiate(): Import #1 module="runtime" function="printErrorMessage" error: function import requires a callable
 
